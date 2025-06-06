@@ -1,0 +1,22 @@
+{
+  "name": "com.welwise.clothessharedmodule",
+  "displayName": "Clothes Shared Module",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "description": "",
+  "keywords": [
+    "clothes",
+    "shared",
+    "module"
+  ],
+  "category": "ClothesShared",
+  "author": {
+    "name": "Arendrast",
+    "email": "Arendrast@gmail.com",
+    "url": "https://github.com/arendrast"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Welwise-Games/ClothesShared_Module"
+  }
+}
