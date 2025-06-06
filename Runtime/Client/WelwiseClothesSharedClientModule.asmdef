@@ -1,0 +1,22 @@
+{
+    "name": "WelwiseClothesSharedClientModule",
+    "rootNamespace": "",
+    "references": [
+        "GUID:5c6184cbae34e72478e19ee3a10e88f0",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b348fe951f0f74f479ae473b84c45c1e",
+        "GUID:9e24947de15b9834991c9d8411ea37cf"
+    ],
+    "includePlatforms": [
+        "Editor",
+        "WebGL"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
