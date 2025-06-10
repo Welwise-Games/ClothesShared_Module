@@ -1,8 +1,13 @@
 {
   "name": "com.welwise.clothessharedmodule",
   "displayName": "Clothes Shared Module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "unity": "2022.3",
+  "dependencies": {
+    "com.welwise.sharedmodule": "https://github.com/Welwise-Games/Shared_Module",
+    "com.unity.addressables": "1.21.21",
+    "com.cysharp.unitask": "2.5.10"
+  },
   "description": "",
   "keywords": [
     "clothes",
