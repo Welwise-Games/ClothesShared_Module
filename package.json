@@ -1,6 +1,6 @@
 {
   "name": "com.welwise.clothessharedmodule",
-  "displayName": "Clothes Shared Module",
+  "displayName": "Welwise Clothes Shared Module",
   "version": "1.0.1",
   "unity": "2022.3",
   "dependencies": {
