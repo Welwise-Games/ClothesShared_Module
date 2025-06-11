@@ -12,4 +12,4 @@ EntryPoint:<br>
 
 При создании игрока:<br>
 Вызовите NicknameSharedTools.GetPlayerColorableClothesViewController(itemsConfig, clothesFactory, serializableComponents, equippedItemsData), где itemsConfigs получается вызовом itemsConfigsProviderService.GetItemsConfigAsync(),
-serializableComponents - получив компонент у игрока (пример заполнения можно посмотреть в папке Runtime/Client/Example/Example.prefab у объекта с именем V3 Character), а equippedItemsData например из сдк.
+serializableComponents - получив компонент у игрока (пример заполнения можно посмотреть в папке Runtime/Client/Example/Example.prefab), а equippedItemsData например из сдк.
