@@ -1,10 +1,15 @@
 Общий модуль для модулей одежды.
 
-Гайд по внедрению в проект:
+<b>Установка</b>
+1. Установите модуль: https://github.com/Welwise-Games/Shared_Module
+2. Установите пакет по пути Package Manager -> Add package from git URL -> https://github.com/Welwise-Games/ClothesShared_Module.git
 
-EntryPoint
+<b>Код</b><br>
+Если класс пишется с маленькой буквы, значит имеется ввиду название инстанса. 
+
+EntryPoint:<br>
 Создайте и сохраните инстанс itemsConfigsProviderService и clothesFactory.
 
-При создании игрока
+При создании игрока:<br>
 Вызовите NicknameSharedTools.GetPlayerColorableClothesViewController(itemsConfig, clothesFactory, serializableComponents, equippedItemsData), где itemsConfigs получается вызовом itemsConfigsProviderService.GetItemsConfigAsync(),
 serializableComponents - получив компонент у игрока (пример заполнения можно посмотреть в папке Runtime/Client/Example/Example.prefab у объекта с именем V3 Character), а equippedItemsData например из сдк.
