@@ -4,7 +4,8 @@
 1. Установите модуль: https://github.com/Welwise-Games/Shared_Module
 2. Установите пакет по пути Window -> Package Manager -> Add package from git URL -> https://github.com/Welwise-Games/ClothesShared_Module.git
 3. После установки перейдите Window -> Asset Management -> Addressables -> Groups. Если настройки не созданы, создайте (большая кнопка в середине окна). 
-Переместите файлы Clothes Shared Client Module Group и Clothes Shared Shared Module Group (вы можете найти их в поиске в окне Project в unity) в окно Groups через Drag and drop.
+4. Переместите папки вместе с их мета-файлами Addressables из Runtime/Client и Runtime/Shared в Assets папку (в любую, кроме папки Editor).
+5. Переместите файлы Clothes Shared Client Module Group и Clothes Shared Shared Module Group (вы можете найти их в поиске в папках Addressables, которые переместили пунктом ранее) в окно Groups (пункт 3) через Drag and drop (если они там ещё не находятся)
 
 <b>Пример</b><br>
 По пути Runtime/Client/Example/ExampleScene (внутри сцены) есть персонаж, на котором есть компонент ClothesLoader - он загружает одежду из сдк при запуске сцены. Для открытия сцены скопируйте её в папку Assets и откройте эту новую сцену.
