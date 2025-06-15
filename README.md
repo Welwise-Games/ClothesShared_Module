@@ -4,7 +4,7 @@
 1. Установите модуль: https://github.com/Welwise-Games/Shared_Module
 2. Установите пакет по пути Window -> Package Manager -> Add package from git URL -> https://github.com/Welwise-Games/ClothesShared_Module.git
 3. После установки перейдите Window -> Asset Management -> Addressables -> Groups. Если настройки не созданы, создайте (большая кнопка в середине окна). 
-4. Переместите папки вместе с их мета-файлами Addressables из Runtime/Client и Runtime/Shared в Assets папку (в любую, кроме папки Editor).
+4. Переместите папки вместе с их мета-файлами Addressables и Loadable из Runtime/Client и Runtime/Shared в Assets папку (в любую, кроме папки Editor).
 5. Переместите файлы Clothes Shared Client Module Group и Clothes Shared Shared Module Group (вы можете найти их в поиске в папках Addressables, которые переместили пунктом ранее) в окно Groups (пункт 3) через drag and drop (если они там ещё не находятся).
 
 <b>Код</b><br>
