@@ -7,11 +7,6 @@
 4. Переместите папки вместе с их мета-файлами Addressables из Runtime/Client и Runtime/Shared в Assets папку (в любую, кроме папки Editor).
 5. Переместите файлы Clothes Shared Client Module Group и Clothes Shared Shared Module Group (вы можете найти их в поиске в папках Addressables, которые переместили пунктом ранее) в окно Groups (пункт 3) через Drag and drop (если они там ещё не находятся)
 
-<b>Пример</b><br>
-По пути Runtime/Client/Example/ExampleScene (внутри сцены) есть персонаж, на котором есть компонент ClothesLoader - он загружает одежду из сдк при запуске сцены. Для открытия сцены скопируйте её в папку Assets и откройте эту новую сцену.
-Также на нём есть компонент PlayerColorableClothesViewSerializableComponents, где в полях компоненты MainSkinnedMeshRenderer - это любая часть персонажа с компонентом Skinned Mesh Renderer,
-а DefaultClothesInstances - дефолтные части одежды, которые будут выключены, если на персонаже есть другая одежда той же категории (у персонажа в примере также всё указано). 
-
 <b>Код</b><br>
 Если класс пишется с маленькой буквы, значит имеется ввиду название инстанса. 
 
