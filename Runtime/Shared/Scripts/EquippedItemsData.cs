@@ -4,11 +4,11 @@ using System.Collections.Generic;
 namespace WelwiseClothesSharedModule.Runtime.Shared.Scripts
 {
     [Serializable]
-    public class ClientEquippedItemsData
+    public class EquippedItemsData
     {
         public List<EquippedItemData> ItemsData { get; set; }
 
-        public ClientEquippedItemsData() {}
-        public ClientEquippedItemsData(List<EquippedItemData> itemsData) => ItemsData = itemsData;
+        public EquippedItemsData() {}
+        public EquippedItemsData(List<EquippedItemData> itemsData) => ItemsData = itemsData;
     }
 }

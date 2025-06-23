@@ -9,12 +9,12 @@ namespace WelwiseClothesSharedModule.Runtime.Client.Scripts.Example
         private ClothesFactory _clothesFactory = new();
 
         public async void OnCreatePlayerAsync(
-            PlayerColorableClothesViewSerializableComponents playerColorableClothesViewSerializableComponents,
-            ClientEquippedItemsData clientEquippedItemsData)
+            ColorableClothesViewSerializableComponents colorableClothesViewSerializableComponents,
+            EquippedItemsData equippedItemsData)
         {
             ClothesSharedTools.GetPlayerColorableClothesViewController(
                 await _itemsConfigsProviderService.GetItemsConfigAsync(), _clothesFactory,
-                playerColorableClothesViewSerializableComponents, clientEquippedItemsData);
+                colorableClothesViewSerializableComponents, equippedItemsData);
         }
     }
 }

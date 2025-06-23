@@ -6,7 +6,7 @@ using WelwiseSharedModule.Runtime.Shared.Scripts.Tools;
 
 namespace WelwiseClothesSharedModule.Runtime.Client.Scripts
 {
-    public class PlayerColorableClothesViewController
+    public class ColorableClothesViewController
     {
         private readonly Dictionary<ItemCategory, ClothesSkinnedMeshRendererController>
             _clothesSkinnedMeshRendererControllerByItemCategory;
@@ -17,8 +17,8 @@ namespace WelwiseClothesSharedModule.Runtime.Client.Scripts
 
         private readonly ItemsConfig _itemsConfig;
 
-        public PlayerColorableClothesViewController(ClientEquippedItemsData equippedItemsData, ItemsConfig itemsConfig,
-            PlayerColorableClothesViewSerializableComponents playerColorableClothesViewSerializableComponents,
+        public ColorableClothesViewController(EquippedItemsData equippedItemsData, ItemsConfig itemsConfig,
+            ColorableClothesViewSerializableComponents colorableClothesViewSerializableComponents,
             ClothesFactory clothesFactory)
         {
             _itemsConfig = itemsConfig;
@@ -28,9 +28,9 @@ namespace WelwiseClothesSharedModule.Runtime.Client.Scripts
                     category => category, category =>
                     {
                         var controller = new ClothesSkinnedMeshRendererController(
-                            playerColorableClothesViewSerializableComponents.MainSkinnedMeshRenderer,
-                            playerColorableClothesViewSerializableComponents.transform, clothesFactory,
-                            (playerColorableClothesViewSerializableComponents.DefaultClothesInstances
+                            colorableClothesViewSerializableComponents.MainSkinnedMeshRenderer,
+                            colorableClothesViewSerializableComponents.transform, clothesFactory,
+                            (colorableClothesViewSerializableComponents.DefaultClothesInstances
                                 .Find(instance => instance.ItemCategory == category)?.Instances)?.ToList());
                         controller.UpdatedInstance += UpdateInstancesComponentsByConfigDictionary;
                         controller.RemovedInstance += config => _clothesInstancesComponentsByConfig.Remove(config);
@@ -74,9 +74,9 @@ namespace WelwiseClothesSharedModule.Runtime.Client.Scripts
             _clothesInstancesComponentsByConfig.AddOrAppoint(newConfig, colorableClothesSerializableComponents);
         }
 
-        public void SetClothesInstancesByData(ClientEquippedItemsData clientEquippedItemsData)
+        public void SetClothesInstancesByData(EquippedItemsData equippedItemsData)
         {
-            foreach (var itemData in clientEquippedItemsData.ItemsData)
+            foreach (var itemData in equippedItemsData.ItemsData)
             {
                 var itemConfig = itemData.ItemIndex == null ? null : _itemsConfig.TryGettingConfig(itemData.ItemIndex);
                 var category = itemData.ItemCategory;
