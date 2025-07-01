@@ -11,17 +11,16 @@ namespace WelwiseClothesSharedModule.Runtime.Client.Scripts
         private readonly Dictionary<ItemCategory, ClothesSkinnedMeshRendererController>
             _clothesSkinnedMeshRendererControllerByItemCategory;
 
-        private readonly Dictionary<ItemConfig, ColorableClothesSerializableComponents>
-            _clothesInstancesComponentsByConfig =
-                new Dictionary<ItemConfig, ColorableClothesSerializableComponents>();
+        private readonly Dictionary<ItemViewConfig, ColorableClothesSerializableComponents>
+            _clothesInstancesComponentsByConfig = new Dictionary<ItemViewConfig, ColorableClothesSerializableComponents>();
 
-        private readonly ItemsConfig _itemsConfig;
+        private readonly ItemsViewConfig _itemsViewConfig;
 
-        public ColorableClothesViewController(EquippedItemsData equippedItemsData, ItemsConfig itemsConfig,
+        public ColorableClothesViewController(EquippedItemsData equippedItemsData, ItemsViewConfig itemsViewConfig,
             ColorableClothesViewSerializableComponents colorableClothesViewSerializableComponents,
             ClothesFactory clothesFactory)
         {
-            _itemsConfig = itemsConfig;
+            _itemsViewConfig = itemsViewConfig;
 
             _clothesSkinnedMeshRendererControllerByItemCategory = CollectionTools.ToList<ItemCategory>()
                 .Where(category => category is not ItemCategory.All and not ItemCategory.Color).ToDictionary(
@@ -40,7 +39,7 @@ namespace WelwiseClothesSharedModule.Runtime.Client.Scripts
             SetClothesInstancesByData(equippedItemsData);
         }
 
-        public void TrySettingClothesInstance(ItemConfig itemConfig, ItemCategory itemCategory, bool shouldTakeOff)
+        public void TrySettingClothesInstance(ItemViewConfig itemConfig, ItemCategory itemCategory, bool shouldTakeOff)
         {
             _clothesSkinnedMeshRendererControllerByItemCategory.GetValueOrDefault(itemCategory)
                 ?.UpdateInstanceAsync(itemConfig, shouldTakeOff);
@@ -54,10 +53,10 @@ namespace WelwiseClothesSharedModule.Runtime.Client.Scripts
             controller?.SetActivePrefabInstances();
         }
 
-        public Material[] GetClothesInstanceMaterials(ItemConfig itemConfig) =>
+        public Material[] GetClothesInstanceMaterials(ItemViewConfig itemConfig) =>
             _clothesInstancesComponentsByConfig.GetValueOrDefault(itemConfig)?.RendererWithMaterials.sharedMaterials;
 
-        public void TrySettingClothesColor(ItemConfig itemConfig, int materialIndex, Color color)
+        public void TrySettingClothesColor(ItemViewConfig itemConfig, int materialIndex, Color color)
         {
             var instance = _clothesInstancesComponentsByConfig.GetValueOrDefault(itemConfig);
 
@@ -65,7 +64,7 @@ namespace WelwiseClothesSharedModule.Runtime.Client.Scripts
                 instance.RendererWithMaterials.sharedMaterials[materialIndex].color = color;
         }
 
-        private void UpdateInstancesComponentsByConfigDictionary(ItemConfig oldConfig, ItemConfig newConfig,
+        private void UpdateInstancesComponentsByConfigDictionary(ItemViewConfig oldConfig, ItemViewConfig newConfig,
             ColorableClothesSerializableComponents colorableClothesSerializableComponents)
         {
             if (oldConfig != null)
@@ -78,7 +77,7 @@ namespace WelwiseClothesSharedModule.Runtime.Client.Scripts
         {
             foreach (var itemData in equippedItemsData.ItemsData)
             {
-                var itemConfig = itemData.ItemIndex == null ? null : _itemsConfig.TryGettingConfig(itemData.ItemIndex);
+                var itemConfig = itemData.ItemIndex == null ? null : _itemsViewConfig.TryGettingConfig(itemData.ItemIndex);
                 var category = itemData.ItemCategory;
                 TrySettingClothesInstance(itemConfig, category, false);
             }

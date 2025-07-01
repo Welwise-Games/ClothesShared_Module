@@ -9,10 +9,10 @@ namespace WelwiseClothesSharedModule.Runtime.Client.Scripts
 {
     public class ClothesSkinnedMeshRendererController
     {
-        public event Action<ItemConfig, ItemConfig, ColorableClothesSerializableComponents> UpdatedInstance;
-        public event Action<ItemConfig> RemovedInstance;
+        public event Action<ItemViewConfig, ItemViewConfig, ColorableClothesSerializableComponents> UpdatedInstance;
+        public event Action<ItemViewConfig> RemovedInstance;
 
-        private ItemConfig _targetItemConfig;
+        private ItemViewConfig _targetItemViewConfig;
         private bool _shouldEnableInstances = true;
 
         private readonly List<GameObject> _defaultClothesInstance;
@@ -35,22 +35,22 @@ namespace WelwiseClothesSharedModule.Runtime.Client.Scripts
 
         public void SetActivePrefabInstances() => _prefabInstances.ForEach(instance => instance.gameObject.SetActive(_shouldEnableInstances));
 
-        public async void UpdateInstanceAsync(ItemConfig itemConfig, bool shouldTakeOff)
+        public async void UpdateInstanceAsync(ItemViewConfig itemConfig, bool shouldTakeOff)
         {
             shouldTakeOff = shouldTakeOff || itemConfig == null;
             
             if (shouldTakeOff)
             {
-                if (_targetItemConfig != null)
-                    RemovedInstance?.Invoke(_targetItemConfig);
+                if (_targetItemViewConfig != null)
+                    RemovedInstance?.Invoke(_targetItemViewConfig);
              
                 _prefabInstances.ForEach(Object.Destroy);
                 _prefabInstances.Clear();
-                _targetItemConfig = null;
+                _targetItemViewConfig = null;
             }
             else
             {
-                var instance = await GetInstantiatedPrefabsAsync(_modelSkinnedMeshRenderer, itemConfig, _modelTransform);
+                var instance = await GetInstantiatedPrefabsInstancesAsync(_modelSkinnedMeshRenderer, itemConfig, _modelTransform);
                 _prefabInstances.ForEach(Object.Destroy);
                 _prefabInstances.Clear();
                 _prefabInstances.Add(instance);
@@ -60,7 +60,7 @@ namespace WelwiseClothesSharedModule.Runtime.Client.Scripts
             _defaultClothesInstance?.ForEach(instance => instance.SetActive(shouldTakeOff));
         }
 
-        private async UniTask<GameObject> GetInstantiatedPrefabsAsync(SkinnedMeshRenderer prefabSkinnedMeshRenderer, ItemConfig itemConfig,
+        private async UniTask<GameObject> GetInstantiatedPrefabsInstancesAsync(SkinnedMeshRenderer prefabSkinnedMeshRenderer, ItemViewConfig itemConfig,
             Transform parent)
         {
             var instance = await _clothesFactory.GetClothesInstanceAsync(itemConfig, parent);
@@ -73,9 +73,9 @@ namespace WelwiseClothesSharedModule.Runtime.Client.Scripts
                 skinnedRenderer.rootBone = prefabSkinnedMeshRenderer.rootBone;
             }
 
-            UpdatedInstance?.Invoke(_targetItemConfig, itemConfig, instance);
+            UpdatedInstance?.Invoke(_targetItemViewConfig, itemConfig, instance);
 
-            _targetItemConfig = itemConfig;
+            _targetItemViewConfig = itemConfig;
 
             return instance.gameObject;
         }

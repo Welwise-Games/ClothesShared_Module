@@ -11,12 +11,12 @@ namespace WelwiseClothesSharedModule.Runtime.Client.Scripts
         public const string EquippedItemsDataFieldNameForMetaverseSavings = "EquippedItemsData";
 
         public static ColorableClothesViewController GetPlayerColorableClothesViewController(
-            ItemsConfig itemsConfig, ClothesFactory clothesFactory,
+            ItemsViewConfig itemsViewConfig, ClothesFactory clothesFactory,
             ColorableClothesViewSerializableComponents serializableComponents,
             EquippedItemsData equippedItemsData) =>
             new ColorableClothesViewController(
                 equippedItemsData,
-                itemsConfig,
+                itemsViewConfig,
                 serializableComponents, clothesFactory);
     }
 }

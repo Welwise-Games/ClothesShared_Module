@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: ItemsConfig
   m_EditorClassIdentifier: 
   <Items>k__BackingField:
-  - {fileID: 11400000, guid: 4c5add466f7f93844bfcab0fe097f00b, type: 2}
-  - {fileID: 11400000, guid: 4069d4695fed9a041be482ae04387ff2, type: 2}
-  - {fileID: 11400000, guid: 8bb4fd053d072e445b7c7730cce5f8ae, type: 2}
-  - {fileID: 11400000, guid: 03ce67a3eea765e42a4197275e609606, type: 2}
+  - {fileID: 11400000, guid: 708ed7a2316ac6041ba0527a9e65ce0f, type: 2}
+  - {fileID: 11400000, guid: 9c1f47867e0789442872ebe8ac439d5a, type: 2}
+  - {fileID: 11400000, guid: 89d0263d45956af489d482aa2b416f0d, type: 2}
+  - {fileID: 11400000, guid: 2762783b6e73a4a449a0ba2dd7857030, type: 2}
   - {fileID: 11400000, guid: 094f1c8237678b345ac7d30620a0c304, type: 2}
   - {fileID: 11400000, guid: cedac52ff14818a4ea230d32e138ba4d, type: 2}
   - {fileID: 11400000, guid: 356c7242e09033149b491e30143fab10, type: 2}
