@@ -107,22 +107,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 86a55206bcf7aab44bf97c82692fec5e
-    m_Address: BaseballHat
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8aa5aa56bf1b3a44e851058580ced543
     m_Address: Fanny_Boots_NikeSneakers
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 923608510ad25834d8c95719f642b1f3
-    m_Address: King_Hat
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 94fca9e3e2408314b94b9fd79942bf38
     m_Address: King_Hat
     m_ReadOnly: 0
     m_SerializedLabels: []
