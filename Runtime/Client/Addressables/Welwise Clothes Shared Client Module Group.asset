@@ -117,11 +117,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a7e4c6cbdf199ec4e930c97abb9669a4
-    m_Address: Glasses
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: aa9e6213f951edc4fa9293c5a9485b7f
     m_Address: Glasses
     m_ReadOnly: 0
