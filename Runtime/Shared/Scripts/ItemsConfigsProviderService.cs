@@ -13,7 +13,7 @@ namespace WelwiseClothesSharedModule.Runtime.Shared.Scripts
 #if ADDRESSABLES
             "ItemsConfig";
 #else
-        "ItemsConfig";
+            "WelwiseClothesSharedModule/Runtime/Shared/Loadable/ItemsConfig";
 #endif
         
         public ItemsConfigsProviderService(IAssetLoader assetLoader)
