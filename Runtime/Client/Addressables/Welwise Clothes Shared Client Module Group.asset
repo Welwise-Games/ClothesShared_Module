@@ -52,6 +52,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ee36cf46c759a84d82f38a866a2a464
+    m_Address: EmissionColor
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3bc4053f3f21e9a44a55adb09edfc1c5
     m_Address: Fanny_Boots_SmileSlippers
     m_ReadOnly: 0
@@ -107,6 +112,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86a55206bcf7aab44bf97c82692fec5e
+    m_Address: BaseballHat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8aa5aa56bf1b3a44e851058580ced543
     m_Address: Fanny_Boots_NikeSneakers
     m_ReadOnly: 0
@@ -117,8 +127,28 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 94fca9e3e2408314b94b9fd79942bf38
+    m_Address: King_Hat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a236854243206eb4c9a426cc603c4949
+    m_Address: TEXTURE ATLAS
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a7e4c6cbdf199ec4e930c97abb9669a4
+    m_Address: Glasses
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: aa9e6213f951edc4fa9293c5a9485b7f
     m_Address: Glasses
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c4457df3e3e3fc640a8b88543f1a5d89
+    m_Address: SkinColor
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
