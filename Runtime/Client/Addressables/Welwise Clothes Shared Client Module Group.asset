@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Welwise Clothes Shared Client Module Group
   m_Data:
     m_SerializedData: []
-  m_GUID: 45c5b116b4535c54d8da040f3feeb4e3
+  m_GUID: d6043d3e327711a489441758eb6888ab
   m_SerializeEntries:
   - m_GUID: 073e8d3dfecb05741b79e3bd1c1d5949
     m_Address: Suit_Body
@@ -112,11 +112,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 86a55206bcf7aab44bf97c82692fec5e
-    m_Address: BaseballHat
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8aa5aa56bf1b3a44e851058580ced543
     m_Address: Fanny_Boots_NikeSneakers
     m_ReadOnly: 0
@@ -138,7 +133,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a7e4c6cbdf199ec4e930c97abb9669a4
-    m_Address: Glasses
+    m_Address: GlassesModel
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -211,4 +206,4 @@ MonoBehaviour:
   m_Settings: {fileID: 11400000, guid: 237a77756b9c52945863cb194eef1450, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: efc4d797c54fcf54fbbcc492fa182fe3, type: 2}
+    - {fileID: 11400000, guid: c0b2d7a4a56f4fc45b527de07f4eba84, type: 2}

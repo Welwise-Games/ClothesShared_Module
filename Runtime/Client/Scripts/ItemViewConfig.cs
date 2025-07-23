@@ -11,6 +11,8 @@ namespace WelwiseClothesSharedModule.Runtime.Client.Scripts
         [field: SerializeField] public Sprite ItemSprite { get; private set; }
         [field: SerializeField] public string ItemName { get; private set; }
         [field: SerializeField] public AssetReference PrefabReference { get; private set; }
+#if !ADDRESSABLES || UNITY_EDITOR
         [field: SerializeField] public ColorableClothesSerializableComponents Prefab { get; private set; }
+#endif
     }
 }
