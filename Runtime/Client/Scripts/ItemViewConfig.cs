@@ -4,7 +4,7 @@ using WelwiseClothesSharedModule.Runtime.Shared.Scripts;
 
 namespace WelwiseClothesSharedModule.Runtime.Client.Scripts
 {
-    [CreateAssetMenu(fileName = "ItemViewConfig", menuName = "ItemViewConfig", order = 2)]
+    [CreateAssetMenu(menuName = "WelwiseClothesModule/ItemViewConfig", order = 2)]
     public class ItemViewConfig : ScriptableObject, IIndexableItemConfig
     {
         [field: SerializeField] public string ItemIndex { get; private set; }
