@@ -113,7 +113,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 86a55206bcf7aab44bf97c82692fec5e
-    m_Address: BaseballHatt
+    m_Address: BaseballHatModel
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 94fca9e3e2408314b94b9fd79942bf38
-    m_Address: King_Hatt
+    m_Address: King_HatModel
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -138,7 +138,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a7e4c6cbdf199ec4e930c97abb9669a4
-    m_Address: GlassesView
+    m_Address: GlassesModel
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
